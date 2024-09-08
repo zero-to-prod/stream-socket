@@ -1,0 +1,38 @@
+{
+  "type": "library",
+  "name": "zero-to-prod/stream-socket",
+  "description": "A wrapper for stream_socket_client()",
+  "keywords": [
+    "stream-socket",
+    "Socket Client",
+    "zero-to-prod"
+  ],
+  "homepage": "https://github.com/zero-to-prod/stream-socket",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "David Smith",
+      "email": "dave0016@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.1",
+    "zero-to-prod/data-model": "^v71.2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Zerotoprod\\StreamSocket\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.0"
+  },
+  "suggest": {
+    "zero-to-prod/stream-context": "A wrapper for stream_context_create()."
+  }
+}
