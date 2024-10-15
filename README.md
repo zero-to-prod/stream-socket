@@ -1,9 +1,11 @@
 # `Zerotoprod\StreamSocket`
 
 [![Repo](https://img.shields.io/badge/github-gray?logo=github)](https://github.com/zero-to-prod/stream-socket)
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/zero-to-prod/stream-socket.svg)](https://packagist.org/packages/zero-to-prod/stream-socket)
-![test](https://github.com/zero-to-prod/stream-socket/actions/workflows/phpunit.yml/badge.svg)
-![Downloads](https://img.shields.io/packagist/dt/zero-to-prod/stream-socket.svg?style=flat-square&#41;]&#40;https://packagist.org/packages/zero-to-prod/stream-socket&#41)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/zero-to-prod/stream-socket/phpunit.yml?label=tests)](https://github.com/zero-to-prod/stream-socket/actions)
+[![Packagist Downloads](https://img.shields.io/packagist/dt/zero-to-prod/stream-socket?color=blue)](https://packagist.org/packages/zero-to-prod/stream-socket/stats)
+[![Packagist Version](https://img.shields.io/packagist/v/zero-to-prod/stream-socket?color=f28d1a)](https://packagist.org/packages/zero-to-prod/stream-socket)
+[![GitHub repo size](https://img.shields.io/github/repo-size/zero-to-prod/stream-socket)](https://github.com/zero-to-prod/stream-socket)
+[![License](https://img.shields.io/packagist/l/zero-to-prod/stream-socket?color=red)](https://github.com/zero-to-prod/stream-socket/blob/main/LICENSE.md)
 
 A wrapper for the [`stream_socket_client()`](https://www.php.net/manual/en/function.stream-stream-socket.php) method.
 
