@@ -28,7 +28,7 @@ class StreamSocket
      * @link https://www.php.net/manual/en/function.stream-stream-socket.php
      * @see  https://github.com/zero-to-prod/stream-socket
      */
-    public static function client(string $address, ?float $timeout, int $flags = STREAM_CLIENT_CONNECT, $context): ClientStream
+    public static function client(string $address, ?float $timeout, int $flags = STREAM_CLIENT_CONNECT, $context = null): ClientStream
     {
         return ClientStream::from([
             ClientStream::client => stream_socket_client(
@@ -37,7 +37,7 @@ class StreamSocket
                 $error_message,
                 $timeout,
                 $flags,
-                $context
+                $context ?? stream_context_create()
             ),
             ClientStream::error_code => $error_code,
             ClientStream::error_message => $error_message,
