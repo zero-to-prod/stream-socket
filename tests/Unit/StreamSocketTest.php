@@ -38,4 +38,22 @@ class StreamSocketTest extends TestCase
 
         $SocketClient->close();
     }
+
+    /**
+     * @test
+     * @dataProvider urls
+     *
+     * @see          StreamSocket
+     */
+    public function can_create_client_without_context(string $url): void
+    {
+        $SocketClient = StreamSocket::client(
+            'ssl://'.$url.':'. 443,
+            30
+        );
+
+        $this->assertNotNull($SocketClient->remoteSocketName());
+
+        $SocketClient->close();
+    }
 }
