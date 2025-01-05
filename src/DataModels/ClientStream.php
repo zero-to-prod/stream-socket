@@ -193,6 +193,8 @@ class ClientStream
      */
     public function close(): bool
     {
-        return fclose($this->client);
+        return is_bool($this->client)
+            ? $this->client
+            : fclose($this->client);
     }
 }
