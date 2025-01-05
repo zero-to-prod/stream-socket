@@ -11,7 +11,7 @@ class StreamSocketTest extends TestCase
     /**
      * @return array
      */
-    public function urls(): array
+    public static function urls(): array
     {
         return [
             'neverssl.com' => ['neverssl.com'],

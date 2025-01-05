@@ -6,6 +6,7 @@
 [![Packagist Version](https://img.shields.io/packagist/v/zero-to-prod/stream-socket?color=f28d1a)](https://packagist.org/packages/zero-to-prod/stream-socket)
 [![GitHub repo size](https://img.shields.io/github/repo-size/zero-to-prod/stream-socket)](https://github.com/zero-to-prod/stream-socket)
 [![License](https://img.shields.io/packagist/l/zero-to-prod/stream-socket?color=red)](https://github.com/zero-to-prod/stream-socket/blob/main/LICENSE.md)
+[![Hits-of-Code](https://hitsofcode.com/github/zero-to-prod/stream-socket?branch=main)](https://hitsofcode.com/github/zero-to-prod/stream-socket/view?branch=main)
 
 A wrapper for the [`stream_socket_client()`](https://www.php.net/manual/en/function.stream-stream-socket.php) method.
 
