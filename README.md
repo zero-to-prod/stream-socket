@@ -17,7 +17,7 @@ It provides classes that define all the options for this method.
 To install this package, add it to your composer.json file and run composer install:
 
 ```shell
-composer require zerotoprod/stream-socket
+composer require zero-to-prod/stream-socket
 ```
 
 ## Usage
