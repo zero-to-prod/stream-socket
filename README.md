@@ -1,5 +1,7 @@
 # Zerotoprod\StreamSocket
 
+![](./art/logo.png)
+
 [![Repo](https://img.shields.io/badge/github-gray?logo=github)](https://github.com/zero-to-prod/stream-socket)
 [![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/zero-to-prod/stream-socket/test.yml?label=tests)](https://github.com/zero-to-prod/stream-socket/actions)
 [![Packagist Downloads](https://img.shields.io/packagist/dt/zero-to-prod/stream-socket?color=blue)](https://packagist.org/packages/zero-to-prod/stream-socket/stats)
@@ -7,6 +9,8 @@
 [![GitHub repo size](https://img.shields.io/github/repo-size/zero-to-prod/stream-socket)](https://github.com/zero-to-prod/stream-socket)
 [![License](https://img.shields.io/packagist/l/zero-to-prod/stream-socket?color=red)](https://github.com/zero-to-prod/stream-socket/blob/main/LICENSE.md)
 [![Hits-of-Code](https://hitsofcode.com/github/zero-to-prod/stream-socket?branch=main)](https://hitsofcode.com/github/zero-to-prod/stream-socket/view?branch=main)
+
+## Contents
 
 - [Introduction](#introduction)
 - [Requirements](#requirements)
