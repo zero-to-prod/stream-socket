@@ -33,8 +33,7 @@
   ],
   "require": {
     "php": ">=7.1",
-    "zero-to-prod/data-model": "^v71.2.0",
-    "zero-to-prod/dock": "^1.0"
+    "zero-to-prod/data-model": "^v71.2.0"
   },
   "autoload": {
     "psr-4": {
