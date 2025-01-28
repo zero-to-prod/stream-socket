@@ -3,12 +3,13 @@
 namespace Tests\Unit;
 
 use PHPUnit\Framework\Attributes\Test;
+use PHPUnit\Framework\MockObject\MockObject;
 use Tests\TestCase;
 use Zerotoprod\StreamSocket\DataModels\ClientStream;
 
 class SocketClientTest extends TestCase
 {
-    private $socketClient;
+    private ClientStream|MockObject $socketClient;
 
     protected function setUp(): void
     {
