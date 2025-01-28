@@ -8,6 +8,7 @@ use Zerotoprod\StreamSocket\DataModels\ClientStream;
 
 class SocketClientTest extends TestCase
 {
+    private $socketClient;
 
     protected function setUp(): void
     {
