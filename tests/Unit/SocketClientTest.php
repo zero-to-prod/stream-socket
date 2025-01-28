@@ -2,11 +2,14 @@
 
 namespace Tests\Unit;
 
+use PHPUnit\Framework\Attributes\Test;
+use PHPUnit\Framework\MockObject\MockObject;
 use Tests\TestCase;
 use Zerotoprod\StreamSocket\DataModels\ClientStream;
 
 class SocketClientTest extends TestCase
 {
+    private ClientStream|MockObject $socketClient;
 
     protected function setUp(): void
     {
@@ -22,7 +25,7 @@ class SocketClientTest extends TestCase
      *
      * @see ClientStream
      */
-    public function enableCrypto(): void
+    #[Test] public function enableCrypto(): void
     {
         $this->socketClient->method('enableCrypto')->willReturn(true);
 
@@ -34,7 +37,7 @@ class SocketClientTest extends TestCase
      *
      * @see ClientStream
      */
-    public function remoteSocketName(): void
+    #[Test] public function remoteSocketName(): void
     {
         $this->socketClient->method('remoteSocketName')->willReturn('127.0.0.1:1234');
 
@@ -46,7 +49,7 @@ class SocketClientTest extends TestCase
      *
      * @see ClientStream
      */
-    public function localSocketName(): void
+    #[Test] public function localSocketName(): void
     {
         $this->socketClient->method('localSocketName')->willReturn('127.0.0.1:5678');
 
@@ -58,7 +61,7 @@ class SocketClientTest extends TestCase
      *
      * @see ClientStream
      */
-    public function sendto(): void
+    #[Test] public function sendto(): void
     {
         $this->socketClient->method('sendto')->willReturn(strlen('test'));
 
@@ -70,7 +73,7 @@ class SocketClientTest extends TestCase
      *
      * @see ClientStream
      */
-    public function supportsLock(): void
+    #[Test] public function supportsLock(): void
     {
         $this->socketClient->method('supportsLock')->willReturn(true);
 
@@ -82,7 +85,7 @@ class SocketClientTest extends TestCase
      *
      * @see ClientStream
      */
-    public function getOptions(): void
+    #[Test] public function getOptions(): void
     {
         $options = ['ssl' => ['verify_peer' => true]];
 
@@ -96,7 +99,7 @@ class SocketClientTest extends TestCase
      *
      * @see ClientStream
      */
-    public function getParams(): void
+    #[Test] public function getParams(): void
     {
         $params = ['timeout' => 30];
 
@@ -110,7 +113,7 @@ class SocketClientTest extends TestCase
      *
      * @see ClientStream
      */
-    public function close(): void
+    #[Test] public function close(): void
     {
         $this->socketClient->method('close')->willReturn(true);
 

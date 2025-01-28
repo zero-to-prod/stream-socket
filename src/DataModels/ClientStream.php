@@ -40,13 +40,13 @@ class ClientStream
      *
      * @var int $error_code
      */
-    public $error_code;
+    public int $error_code;
     /**
      * Will be set to the system level error message if the connection fails.
      *
      * @var string $error_message
      */
-    public $error_message;
+    public string $error_message;
 
     /**
      * Turns encryption on/off on an already connected socket
@@ -85,7 +85,7 @@ class ClientStream
      * @link https://www.php.net/manual/en/stream.constants.php#constant.stream-crypto-method-sslv2-client
      * @see  https://github.com/zero-to-prod/stream-socket
      */
-    public function enableCrypto(bool $enable, ?int $crypto_method = null, $session_stream = null)
+    public function enableCrypto(bool $enable, ?int $crypto_method = null, $session_stream = null): bool|int
     {
         return stream_socket_enable_crypto($this->client, $enable, $crypto_method, $session_stream);
     }
@@ -99,7 +99,7 @@ class ClientStream
      * @link https://www.php.net/manual/en/function.stream-socket-get-name.php
      * @see  https://github.com/zero-to-prod/stream-socket
      */
-    public function remoteSocketName()
+    public function remoteSocketName(): bool|string
     {
         return stream_socket_get_name($this->client, true);
     }
@@ -113,7 +113,7 @@ class ClientStream
      * @link https://www.php.net/manual/en/function.stream-socket-get-name.php
      * @see  https://github.com/zero-to-prod/stream-socket
      */
-    public function localSocketName()
+    public function localSocketName(): bool|string
     {
         return stream_socket_get_name($this->client, false);
     }
@@ -136,7 +136,7 @@ class ClientStream
      * @link https://www.php.net/manual/en/stream.constants.php#constant.stream-oob
      * @see  https://github.com/zero-to-prod/stream-socket
      */
-    public function sendto(string $data, int $flags = 0, string $address = "")
+    public function sendto(string $data, int $flags = 0, string $address = ""): bool|int
     {
         return stream_socket_sendto($this->client, false);
     }

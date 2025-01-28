@@ -2,15 +2,14 @@
 
 namespace Tests\Unit;
 
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Test;
 use Tests\TestCase;
 use Zerotoprod\StreamSocket\StreamSocket;
 
 class StreamSocketTest extends TestCase
 {
 
-    /**
-     * @return array
-     */
     public static function urls(): array
     {
         return [
@@ -19,13 +18,8 @@ class StreamSocketTest extends TestCase
         ];
     }
 
-    /**
-     * @test
-     * @dataProvider urls
-     *
-     * @see          StreamSocket
-     */
-    public function can_create_client(string $url): void
+    #[DataProvider('urls')]
+    #[Test] public function can_create_client(string $url): void
     {
         $SocketClient = StreamSocket::client(
             'ssl://'.$url.':'. 443,
@@ -39,13 +33,8 @@ class StreamSocketTest extends TestCase
         $SocketClient->close();
     }
 
-    /**
-     * @test
-     * @dataProvider urls
-     *
-     * @see          StreamSocket
-     */
-    public function can_create_client_without_context(string $url): void
+    #[DataProvider('urls')]
+    #[Test] public function can_create_client_without_context(string $url): void
     {
         $SocketClient = StreamSocket::client(
             'ssl://'.$url.':'. 443,
