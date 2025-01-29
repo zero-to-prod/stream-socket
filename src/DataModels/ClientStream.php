@@ -87,7 +87,9 @@ class ClientStream
      */
     public function enableCrypto(bool $enable, ?int $crypto_method = null, $session_stream = null): bool|int
     {
-        return stream_socket_enable_crypto($this->client, $enable, $crypto_method, $session_stream);
+        return $this->client
+            ? stream_socket_enable_crypto($this->client, $enable, $crypto_method, $session_stream)
+            : false;
     }
 
     /**
@@ -101,7 +103,9 @@ class ClientStream
      */
     public function remoteSocketName(): bool|string
     {
-        return stream_socket_get_name($this->client, true);
+        return $this->client
+            ? stream_socket_get_name($this->client, true)
+            : false;
     }
 
     /**
@@ -115,7 +119,9 @@ class ClientStream
      */
     public function localSocketName(): bool|string
     {
-        return stream_socket_get_name($this->client, false);
+        return $this->client
+            ? stream_socket_get_name($this->client, false)
+            : false;
     }
 
     /**
@@ -138,7 +144,9 @@ class ClientStream
      */
     public function sendto(string $data, int $flags = 0, string $address = ""): bool|int
     {
-        return stream_socket_sendto($this->client, false);
+        return $this->client
+            ? stream_socket_sendto($this->client, $data, $flags, $address)
+            : false;
     }
 
     /**
@@ -154,7 +162,7 @@ class ClientStream
      */
     public function supportsLock(): bool
     {
-        return stream_supports_lock($this->client);
+        return $this->client && stream_supports_lock($this->client);
     }
 
     /**
@@ -167,7 +175,9 @@ class ClientStream
      */
     public function getOptions(): array
     {
-        return stream_context_get_options($this->client);
+        return $this->client
+            ? stream_context_get_options($this->client)
+            : [];
     }
 
     /**
@@ -180,7 +190,9 @@ class ClientStream
      */
     public function getParams(): array
     {
-        return stream_context_get_params($this->client);
+        return $this->client
+            ? stream_context_get_params($this->client)
+            : [];
     }
 
     /**
@@ -193,8 +205,6 @@ class ClientStream
      */
     public function close(): bool
     {
-        return is_bool($this->client)
-            ? $this->client
-            : fclose($this->client);
+        return $this->client && fclose($this->client);
     }
 }
