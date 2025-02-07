@@ -46,7 +46,7 @@
     }
   },
   "require-dev": {
-    "phpunit/phpunit": "*"
+    "phpunit/phpunit": "<12.0"
   },
   "suggest": {
     "zero-to-prod/stream-context": "A wrapper for stream_context_create()."
