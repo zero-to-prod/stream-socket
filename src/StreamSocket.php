@@ -4,6 +4,11 @@ namespace Zerotoprod\StreamSocket;
 
 use Zerotoprod\StreamSocket\DataModels\ClientStream;
 
+/**
+ * A wrapper for stream_socket_client()
+ *
+ * @link https://github.com/zero-to-prod/stream-socket
+ */
 class StreamSocket
 {
     /**
@@ -27,6 +32,7 @@ class StreamSocket
      * @return ClientStream
      * @link https://www.php.net/manual/en/function.stream-stream-socket.php
      * @see  https://github.com/zero-to-prod/stream-socket
+     * @link https://github.com/zero-to-prod/stream-socket
      */
     public static function client(string $address, ?float $timeout, int $flags = STREAM_CLIENT_CONNECT, $context = null): ClientStream
     {

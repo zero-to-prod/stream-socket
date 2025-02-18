@@ -19,32 +19,44 @@ use Zerotoprod\StreamSocket\Helpers\DataModel;
  * @method self set_error_code(int $error_code) Will be set to the system level error number if connection fails
  * @method self set_error_message(string $error_message) Will be set to the system level error message if the connection fails.
  *
- * @see  https://github.com/zero-to-prod/stream-socket
+ * @link https://github.com/zero-to-prod/stream-socket
  */
 class ClientStream
 {
     use DataModel;
 
+    /**
+     * @link https://github.com/zero-to-prod/stream-socket
+     */
     public const client = 'client';
+    /**
+     * @link https://github.com/zero-to-prod/stream-socket
+     */
     public const error_code = 'error_code';
+    /**
+     * @link https://github.com/zero-to-prod/stream-socket
+     */
     public const error_message = 'error_message';
 
     /**
      * Open Internet or Unix domain socket connection
      *
      * @var false|resource $client
+     * @link https://github.com/zero-to-prod/stream-socket
      */
     public $client;
     /**
      * Will be set to the system level error number if connection fails
      *
      * @var int $error_code
+     * @link https://github.com/zero-to-prod/stream-socket
      */
     public int $error_code;
     /**
      * Will be set to the system level error message if the connection fails.
      *
      * @var string $error_message
+     * @link https://github.com/zero-to-prod/stream-socket
      */
     public string $error_message;
 
@@ -84,6 +96,7 @@ class ClientStream
      * @link https://www.php.net/manual/en/function.stream-socket-enable-crypto.php
      * @link https://www.php.net/manual/en/stream.constants.php#constant.stream-crypto-method-sslv2-client
      * @see  https://github.com/zero-to-prod/stream-socket
+     * @link https://github.com/zero-to-prod/stream-socket
      */
     public function enableCrypto(bool $enable, ?int $crypto_method = null, $session_stream = null): bool|int
     {
@@ -100,6 +113,7 @@ class ClientStream
      *
      * @link https://www.php.net/manual/en/function.stream-socket-get-name.php
      * @see  https://github.com/zero-to-prod/stream-socket
+     * @link https://github.com/zero-to-prod/stream-socket
      */
     public function remoteSocketName(): bool|string
     {
@@ -116,6 +130,7 @@ class ClientStream
      *
      * @link https://www.php.net/manual/en/function.stream-socket-get-name.php
      * @see  https://github.com/zero-to-prod/stream-socket
+     * @link https://github.com/zero-to-prod/stream-socket
      */
     public function localSocketName(): bool|string
     {
@@ -141,6 +156,7 @@ class ClientStream
      * @link https://www.php.net/manual/en/function.stream-socket-sendto.php
      * @link https://www.php.net/manual/en/stream.constants.php#constant.stream-oob
      * @see  https://github.com/zero-to-prod/stream-socket
+     * @link https://github.com/zero-to-prod/stream-socket
      */
     public function sendto(string $data, int $flags = 0, string $address = ""): bool|int
     {
@@ -159,6 +175,7 @@ class ClientStream
      * @return bool Returns true on success or false on failure.
      * @link https://www.php.net/manual/en/function.stream-supports-lock.php
      * @see  https://github.com/zero-to-prod/stream-socket
+     * @link https://github.com/zero-to-prod/stream-socket
      */
     public function supportsLock(): bool
     {
@@ -172,6 +189,7 @@ class ClientStream
      *
      * @link https://www.php.net/manual/en/function.stream-context-get-options.php
      * @see  https://github.com/zero-to-prod/stream-socket
+     * @link https://github.com/zero-to-prod/stream-socket
      */
     public function getOptions(): array
     {
@@ -187,6 +205,7 @@ class ClientStream
      *
      * @link https://www.php.net/manual/en/function.stream-context-get-params.php
      * @see  https://github.com/zero-to-prod/stream-socket
+     * @link https://github.com/zero-to-prod/stream-socket
      */
     public function getParams(): array
     {
@@ -202,6 +221,7 @@ class ClientStream
      *
      * @link https://php.net/manual/en/function.fclose.php
      * @see  https://github.com/zero-to-prod/stream-socket
+     * @link https://github.com/zero-to-prod/stream-socket
      */
     public function close(): bool
     {
