@@ -16,9 +16,9 @@
 - [Introduction](#introduction)
 - [Requirements](#requirements)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Documentation Publishing](#documentation-publishing)
   - [Automatic Documentation Publishing](#automatic-documentation-publishing)
+- [Usage](#usage)
 - [Local Development](./LOCAL_DEVELOPMENT.md)
 - [Contributing](#contributing)
 
@@ -41,23 +41,6 @@ composer require zero-to-prod/stream-socket
 ```
 
 This will add the package to your project’s dependencies and create an autoloader entry for it.
-
-## Usage
-
-```php
-use Zerotoprod\StreamSocket\StreamSocket;
-
-StreamSocket::client(
-    'ssl://'.$url.':'. 443,
-    30
-    STREAM_CLIENT_CONNECT,
-    stream_context_create()
-);
-
-echo $SocketClient->remoteSocketName(); // 34.223.124.45:443
-
-$SocketClient->close();
-```
 
 ## Documentation Publishing
 
@@ -90,6 +73,23 @@ You can automatically publish documentation by adding the following to your `com
     ]
   }
 }
+```
+
+## Usage
+
+```php
+use Zerotoprod\StreamSocket\StreamSocket;
+
+StreamSocket::client(
+    'ssl://'.$url.':'. 443,
+    30
+    STREAM_CLIENT_CONNECT,
+    stream_context_create()
+);
+
+echo $SocketClient->remoteSocketName(); // 34.223.124.45:443
+
+$SocketClient->close();
 ```
 
 ## Contributing
